@@ -1,5 +1,8 @@
 #RouterKeygen for Android
 
+This is a fork of the original routerkeygen in https://github.com/routerkeygen/routerkeygenAndroid.
+This includes the algorithm to generate 10000 possible keys for Primetel in Cyprus.
+
 Router Keygen generate default WPA/WEP keys for the following router:
 
   * Thomson based routers ( this includes Thomson, SpeedTouch, Orange, Infinitum, BBox, DMax, BigPond, O2Wireless, Otenet, Cyta , TN_private, Blink )
@@ -35,7 +38,7 @@ Router Keygen generate default WPA/WEP keys for the following router:
 Router Keygen is open-source licensed under [GPL](http://www.gnu.org/copyleft/gpl.html).
 
 
-#Releases
+#Official Releases
 
 Get them from here:
 https://github.com/routerkeygen/routerkeygenAndroid/releases
