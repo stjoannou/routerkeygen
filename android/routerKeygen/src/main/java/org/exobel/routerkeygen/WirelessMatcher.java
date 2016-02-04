@@ -31,6 +31,7 @@ import org.exobel.routerkeygen.algorithms.OteHuaweiKeygen;
 import org.exobel.routerkeygen.algorithms.OteKeygen;
 import org.exobel.routerkeygen.algorithms.PBSKeygen;
 import org.exobel.routerkeygen.algorithms.PirelliKeygen;
+import org.exobel.routerkeygen.algorithms.PrimetelKeygen;
 import org.exobel.routerkeygen.algorithms.PtvKeygen;
 import org.exobel.routerkeygen.algorithms.Sitecom2100Keygen;
 import org.exobel.routerkeygen.algorithms.SitecomX500Keygen;
@@ -78,6 +79,10 @@ public class WirelessMatcher {
     public synchronized static ArrayList<Keygen> getKeygen(String ssid,
                                                            String mac, ZipInputStream magicInfo) {
         final ArrayList<Keygen> keygens = new ArrayList<>();
+
+        if (ssid.startsWith("PrimeHome-")) {
+            keygens.add(new PrimetelKeygen(ssid, mac));
+        }
 
         if (mac.startsWith("00:19:C7") || mac.startsWith("18:80:F5") || mac.startsWith("A4:C7:DE")
                 || mac.startsWith("A8:AD:3D") || mac.startsWith("AC:9C:E4") || mac.startsWith("D0:54:2D")
